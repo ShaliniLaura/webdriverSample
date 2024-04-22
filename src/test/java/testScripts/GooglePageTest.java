@@ -30,9 +30,9 @@ public class GooglePageTest {
 		WebElement srcBox=driver.findElement(By.id("APjFqb"));
 	//	Locating using Name Attribute
 	//	WebElement srcBox= driver.findElement(By.name("q"));
-    //	Locating using Name Attribute
+    //	Locating using Class Name Attribute
 	//	WebElement srcBox= driver.findElement(By.className("gLFyf"));
-    //	Locating using Name Attribute
+    //	Locating using Tag Name Attribute
 	//	WebElement srcBox= driver.findElement(By.tagName("textarea"));
 		
 		srcBox.sendKeys("Java Tutorial");
