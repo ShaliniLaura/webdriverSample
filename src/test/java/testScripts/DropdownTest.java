@@ -24,21 +24,29 @@ public class DropdownTest {
 		
        // Multi Value DropDown
 		Select mulsel= new Select(driver.findElement(By.xpath("//select[@name='States']")));
+		List<WebElement> opts=mulsel.getOptions();
+		System.out.println("All Options:");
+		for(WebElement allopts : opts)
+		{
+			System.out.println(allopts.getText());
+		}
 		if(mulsel.isMultiple())
 		{
 			mulsel.selectByIndex(0);
 			mulsel.selectByVisibleText("Texas");
 			mulsel.selectByValue("Florida");
 		}
+		
+		WebElement fstselect=mulsel.getFirstSelectedOption();
+		System.out.println("First Selected Option: "+ fstselect.getText());
 	
 		List<WebElement> selectedopt= mulsel.getAllSelectedOptions();
 		System.out.println("Selected Option Count:"+ selectedopt.size());
 		
 		mulsel.deselectByVisibleText("Texas");
 		mulsel.deselectAll();
-		//getOptions
-		//others
 		
+	   
 		
 	}
 }

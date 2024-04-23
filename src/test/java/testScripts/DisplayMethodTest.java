@@ -19,25 +19,25 @@ public class DisplayMethodTest {
 		driver.manage().window().maximize();
 		driver.get("https://automationbookstore.dev/");
 		
-	//click on close icon when displayed on sending values to searchbox
-	  driver.findElement(By.cssSelector("#searchBar")).sendKeys("Test");
-	  WebElement closeicon= driver.findElement(By.cssSelector("a[title='Clear text']"));
-	  System.out.println(closeicon.isDisplayed());
+//	//click on close icon when displayed on sending values to searchbox
+//	  driver.findElement(By.cssSelector("#searchBar")).sendKeys("Test");
+//	  WebElement closeicon= driver.findElement(By.cssSelector("a[title='Clear text']"));
+//	  System.out.println(closeicon.isDisplayed());
 //	  if(closeicon.isDisplayed())
 //	  {
 //		closeicon.click();  
 //	  }
 	  
-	  //Screenshot of entire page
-	  TakesScreenshot sc= (TakesScreenshot) driver;
-	  File src1=sc.getScreenshotAs(OutputType.FILE);
-	  String path1= System.getProperty("user.dir")+ "/screenshots/" + System.currentTimeMillis() +".png";
-	  FileUtils.copyFile(src1,new File(path1));
-	  
-	  //Screenshot of Particular element
-	  File src2=closeicon.getScreenshotAs(OutputType.FILE);
-	  String path2= System.getProperty("user.dir")+ "/partscreenshots/" + System.currentTimeMillis() +".png";
-	  FileUtils.copyFile(src2,new File(path2));
+//	  //Screenshot of entire page
+//	  TakesScreenshot sc= (TakesScreenshot) driver;
+//	  File src1=sc.getScreenshotAs(OutputType.FILE);
+//	  String path1= System.getProperty("user.dir")+ "/screenshots/" + System.currentTimeMillis() +".png";
+//	  FileUtils.copyFile(src1,new File(path1));
+//	  
+//	  //Screenshot of Particular element
+//	  File src2=closeicon.getScreenshotAs(OutputType.FILE);
+//	  String path2= System.getProperty("user.dir")+ "/partscreenshots/" + System.currentTimeMillis() +".png";
+//	  FileUtils.copyFile(src2,new File(path2));
 	  
 	  
 		
@@ -64,12 +64,9 @@ public class DisplayMethodTest {
 //		closeicon.click();  
 //	  }
 
-	//submit
-//		WebElement subsearch= driver.findElement(By.cssSelector("#searchBar"));
-//		subsearch.sendKeys("Test");
-//		subsearch.submit();
+
 		
-	//getAttribute
+
 		
 		
 	}

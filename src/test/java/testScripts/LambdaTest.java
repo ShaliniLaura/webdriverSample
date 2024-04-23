@@ -2,6 +2,7 @@ package testScripts;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LambdaTest {
@@ -21,6 +22,17 @@ public class LambdaTest {
 
 		//CSS Selector- Fetch element - sub string matching
 		driver.findElement(By.cssSelector("ul#menu-side-menu li[id*='43']"));
+
 		
+	   //getAttribute
+		WebElement search=driver.findElement(By.xpath("//input[@type='search']"));
+	    String eleval=search.getAttribute("placeholder");
+		System.out.println("Attribute Value:"+ eleval);
+		
+		//Submit method - Element should be inside Form element and with type='submit'
+		search.sendKeys("Test");
+		search.submit();
+		
+	
 	}
 }
