@@ -17,13 +17,28 @@ public class LoginPageTest {
 		//driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
 		
 		//xpath using logical operators
-		driver.findElement(By.xpath("//input[@name='username' or @type='text']")).sendKeys("tomsmith");
-		driver.findElement(By.xpath("//input[@name='password' and @type='password']")).sendKeys("SuperSecretPassword!");
-		
-		//driver.findElement(By.className("radius")).click();
+	//	driver.findElement(By.xpath("//input[@name='username' or @type='text']")).sendKeys("tomsmith");
+	//	driver.findElement(By.xpath("//input[@name='password' and @type='password']")).sendKeys("SuperSecretPassword!");
 		
 		//Locate using Xpath
 		 driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
+		
+		//CSS Selector
+		//CSS Selector - ID
+		driver.findElement(By.cssSelector("#username")).sendKeys("tomsmith");
+		//CSS Selector - Name
+		driver.findElement(By.cssSelector("input[name='password']")).sendKeys("SuperSecretPassword!");
+		//CSS Selector - Tag and Class
+		//	driver.findElement(By.cssSelector("button.radius")).click();
+		//CSS Selector - Compound class
+		driver.findElement(By.cssSelector(".fa.fa-2x.fa-sign-in")).click();
+		//CSS Selector - Tag and Compound Class Name
+	   //	driver.findElement(By.cssSelector("i.fa.fa-2x.fa-sign-in")).click();
+		
+		
+		//driver.findElement(By.className("radius")).click();
+		
+		
 		 
 		//Locate  WebElement using ClassName locator with compound class Names gives below errors
 		//org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
