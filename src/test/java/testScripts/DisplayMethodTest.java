@@ -1,6 +1,7 @@
 package testScripts;
 
 import java.io.File;
+
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
@@ -10,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 public class DisplayMethodTest {
 
@@ -64,10 +66,17 @@ public class DisplayMethodTest {
 //		closeicon.click();  
 //	  }
 
-
+      //Relative Locators
+		String strid=driver.findElement(with(By.tagName("li"))
+				.toLeftOf(By.id("pid6"))
+				.below(By.id("pid1")))
+				.getAttribute("id");
+		System.out.println(strid);
 		
 
 		
 		
 	}
+
+	
 }
