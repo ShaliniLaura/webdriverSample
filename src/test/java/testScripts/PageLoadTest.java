@@ -20,8 +20,9 @@ public class PageLoadTest {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 		System.out.println("Page Load Done");
 		driver.findElement(By.xpath("//a[text()='Load Delay']")).click();
-		
+		System.out.println("Page Click 1 Done");
 		driver.findElement(By.xpath("//button[text()='Button Appearing After Delay']")).click();
+		System.out.println("Page Click 2 Done");
 		
 	}
 }

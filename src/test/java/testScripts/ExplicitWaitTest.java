@@ -20,8 +20,8 @@ public class ExplicitWaitTest {
 		 
 		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(20));
 		
-		wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.cssSelector(".bg-success")), "Data loaded with AJAX get request."));
-		System.out.println("Text:"+ driver.findElement(By.cssSelector(".bg-success")).getText());
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@id='content']//p"),"Data loaded with AJAX get request."));
+		System.out.println("Text:"+ driver.findElement(By.xpath("//div[@id='content']//p")).getText());
 		
 	}
 }
